@@ -1,0 +1,27 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem 5rem;
+    background-color: white;
+    color: #ae8282;
+}
+
+.product {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #532c2c;
+    color: white;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product h2,
+.product p {
+    margin: 0.5rem 0;
+}
+
+.price {
+    font-size: 1rem;
+    color: white;
+}
