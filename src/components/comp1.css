@@ -1,7 +1,7 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     padding: 1rem 5rem;
-    background-color: white;
+    background-color: azure;
     color: #ae8282;
 }
 
@@ -24,4 +24,12 @@ body {
 .price {
     font-size: 1rem;
     color: white;
+}
+.btn{
+    height: 35px;
+    width: 105px;
+    border: 2px solid white;
+    background-color: #ae8282;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
