@@ -6,7 +6,7 @@ import Product from './components/Product';
 function App() {
   const products = [
     { title: "Mouse", price: 600, description: "First product" },
-    { title: "Keyboard", price: 1200, description: "Second product" },
+    { title: "Key", price: 1200, description: "Second product" },
     { title: "Monitor", price: 1500, description: "Third product" },
     { title: "Printer", price: 2500, description: "Fourth product" },
     { title: "Scanner", price: 3500, description: "Fifth product" },
