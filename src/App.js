@@ -9,7 +9,7 @@ function App() {
     { title: "Keyboard", price: 1200, description: "Second product" },
     { title: "Monitor", price: 1500, description: "Third product" },
     { title: "Printer", price: 2500, description: "Fourth product" },
-    { title: "Scannersss", price: 3500, description: "Fifth product" },
+    { title: "Scanner", price: 3500, description: "Fifth product" },
   ];
 
   return (
