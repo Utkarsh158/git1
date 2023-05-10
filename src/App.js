@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className='pro'>
-      <h1 align="center" style={{ fontSize: '2.5rem' }}>Shop My</h1>
+      <h1 align="center" style={{ fontSize: '2.5rem' }}>My Shop</h1>
       <Product items={products} />
     </div>
   );
