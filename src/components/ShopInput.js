@@ -1,9 +1,16 @@
 import React from 'react';
 import ShopForm from './ShopForm';
-const ShopInput = () => {
+const ShopInput = (props) => {
+    const saveShopDataHandler = (enteredShopData) => {
+        const shopData = {
+            ...enteredShopData,
+            id: Math.random().toString()
+        }
+        props.onAddShop(shopData);
+    };
     return (
         <div>
-            <ShopForm />
+            <ShopForm onSaveShopData={saveShopDataHandler} />
         </div>
     );
 
