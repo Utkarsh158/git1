@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import Product from './components/Product';
-
+import ShopInput from './components/ShopInput';
 
 function App() {
   const products = [
@@ -14,6 +14,8 @@ function App() {
 
   return (
     <div className='pro'>
+    <h1 align="center" style={{ fontSize: '2.5rem' }}>Enter Details</h1>
+        <ShopInput />
       <h1 align="center" style={{ fontSize: '2.5rem' }}>My Shop</h1>
       <Product items={products} />
     </div>
