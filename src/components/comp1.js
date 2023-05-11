@@ -11,7 +11,7 @@ function Comp1(props) {
     };
 
     return (<div className="product">
-        <h2>{title}</h2>
+        <h2>{props.title}</h2>
         <p className="price">{props.price}</p>
         <p>{props.description}</p>
         <button onClick={clickHandler} className='btn'>ADD..</button>
