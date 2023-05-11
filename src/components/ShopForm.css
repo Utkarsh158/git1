@@ -1,0 +1,35 @@
+.new-shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    justify-content: space-around;
+  }
+  
+  .new-shop-item label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .new-shop-item input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #807979;
+    width: 20rem;
+    max-width: 100%;
+    background-color: azure;
+  }
+  
+  .new-shop-actions button{
+    margin-left: 45%;
+    margin-top: 15px;
+    height: 35px;
+    width: 105px;
+    font-size: 1.2rem;
+    border: 3px solid #807979;
+    cursor: pointer;
+    border-radius: 5px;
+  }
