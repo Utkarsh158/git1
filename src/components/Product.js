@@ -1,16 +1,19 @@
-import Comp1 from './comp1';
+import Comp1 from "./comp1";
 
 function Product(props) {
-        return (
-                <div>
-                        {props.items.map((products) => (
-                                <Comp1
-                                        title={products.title}
-                                        price={products.price}
-                                        description={products.description}
-                                />
-                        ))}
-                        {/* <Comp1 title={props.items[0].title}
+  return (
+    <div>
+      <h1 align="center" style={{ fontSize: "2.5rem" }}>
+        My Shop
+      </h1>
+      {props.items.map((products) => (
+        <Comp1
+          title={products.title}
+          price={products.price}
+          description={products.description}
+        />
+      ))}
+      {/* <Comp1 title={props.items[0].title}
                                 price={props.items[0].price}
                                 description={props.items[0].description} />
 
@@ -29,9 +32,8 @@ function Product(props) {
                         <Comp1 title={props.items[4].title}
                                 price={props.items[4].price}
                                 description={props.items[4].description} /> */}
-
-                </div>
-        );
+    </div>
+  );
 }
 
 export default Product;

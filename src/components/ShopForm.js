@@ -1,63 +1,85 @@
-import React, { useCallback, useState } from "react";
-import './ShopForm.css';
+import React, { FuseEffect, useState } from "react";
+import "./ShopForm.css";
+
 const ShopForm = (props) => {
-    const [enteredTitle, setEnteredTitle] = useState('');
-    const [enteredPrice, setEnteredPrice] = useState('');
-    const [enteredDesc, setEnteredDesc] = useState('');
+  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredPrice, setEnteredPrice] = useState("");
+  const [enteredDesc, setEnteredDesc] = useState("");
+  const [count, setCount] = useState(0);
 
-    const titleChangeHandler = (event) => {
-        setEnteredTitle(event.target.value);
-    };
-    const priceChangeHandler = (event) => {
-        setEnteredPrice(event.target.value);
-    };
-    const descChangeHandler = (event) => {
-        setEnteredDesc(event.target.value);
-    };
+  useEffect(() => {
+    if (count >= 1) {
+      document.title = `Students (${count})`;
+    } else {
+      document.title = `Students`;
+    }
+  });
 
-    const submitHandler = (event) => {
-        event.preventDefault();
+  const changeTitle = () => {
+    setCount(count + 1);
+  };
 
-        const shopData = {
-            title: enteredTitle,
-            price: enteredPrice,
-            description: enteredDesc
-        };
-        props.onSaveShopData(shopData);
-        setEnteredTitle('');
-        setEnteredPrice('');
-        setEnteredDesc('');
+  const titleChangeHandler = (event) => {
+    setEnteredTitle(event.target.value);
+  };
+  const priceChangeHandler = (event) => {
+    setEnteredPrice(event.target.value);
+  };
+  const descChangeHandler = (event) => {
+    setEnteredDesc(event.target.value);
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const shopData = {
+      title: enteredTitle,
+      price: enteredPrice,
+      description: enteredDesc,
     };
+    props.onSaveShopData(shopData);
+    setEnteredTitle("");
+    setEnteredPrice("");
+    setEnteredDesc("");
+  };
 
-    return (
-        <div>
-        <form onSubmit={submitHandler}>
-            <div className="new-shop-items">
-                <div className="new-shop-item">
-                    <label>Title</label>
-                    <input type="text"
-                        value={enteredTitle}
-                        onChange={titleChangeHandler} />
-                </div>
-                <div className="new-shop-item">
-                    <label>Price</label>
-                    <input type="number"
-                        value={enteredPrice}
-                        onChange={priceChangeHandler} />
-                </div>
-                <div className="new-shop-item">
-                    <label>Description</label>
-                    <input type="text"
-                        value={enteredDesc}
-                        onChange={descChangeHandler} />
-                </div>
-            </div>
-            <div className="new-shop-actions">
-                <button type="submit">Add Product</button>
-            </div>
-        </form>
-        
-        {/* <h1 className='output'>Submitted Details</h1>
+  return (
+    <div>
+      <form onSubmit={submitHandler}>
+        <div className="new-shop-items">
+          <div className="new-shop-item">
+            <label>Name</label>
+            <input
+              type="text"
+              value={enteredTitle}
+              onChange={titleChangeHandler}
+            />
+          </div>
+          <div className="new-shop-item">
+            <label>Class</label>
+            <input
+              type="text"
+              value={enteredPrice}
+              onChange={priceChangeHandler}
+            />
+          </div>
+          <div className="new-shop-item">
+            <label>College</label>
+            <input
+              type="text"
+              value={enteredDesc}
+              onChange={descChangeHandler}
+            />
+          </div>
+        </div>
+        <div className="new-shop-actions">
+          <button type="submit" onClick={changeTitle}>
+            Add
+          </button>
+        </div>
+      </form>
+
+      {/* <h1 className='output'>Submitted Details</h1>
     {
         list.map((values)=>
         <>
@@ -74,9 +96,7 @@ const ShopForm = (props) => {
         )
     } */}
     </div>
-
-
-    );
+  );
 };
 
 export default ShopForm;

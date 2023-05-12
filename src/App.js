@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
-import { useState } from 'react';
-import './App.css';
-import Product from './components/Product';
-import ShopInput from './components/ShopInput';
+import { useState } from "react";
+import "./App.css";
+import Product from "./components/Product";
+import ShopInput from "./components/ShopInput";
 
 const DummyProducts = [
   // { title: "Mouse", price: 600, description: "First product" },
@@ -13,19 +13,17 @@ const DummyProducts = [
 ];
 
 function App() {
-  const [products,setProducts] = useState(DummyProducts);
+  const [products, setProducts] = useState(DummyProducts);
 
-  const addShopHandlers = products => {
-   setProducts((prevProduct) => {
-    return [products, ...prevProduct];
-   });
+  const addShopHandlers = (products) => {
+    setProducts((prevProduct) => {
+      return [products, ...prevProduct];
+    });
   };
 
   return (
-    <div className='pro'>
-    <h1 align="center" style={{ fontSize: '2.5rem' }}>Enter Details</h1>
-        <ShopInput onAddShop={addShopHandlers} />
-      <h1 align="center" style={{ fontSize: '2.5rem' }}>My Shop</h1>
+    <div>
+      <ShopInput onAddShop={addShopHandlers} />
       <Product items={products} />
     </div>
   );
